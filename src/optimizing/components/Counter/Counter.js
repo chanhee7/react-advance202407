@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useMemo } from 'react';
+import React, { useState, useCallback, useMemo, useEffect } from 'react';
 
 import IconButton from '../../UI/IconButton';
 import MinusIcon from '../../UI/Icons/Minuslcon';
@@ -39,6 +39,12 @@ const Counter = ({ initialCount }) => {
   // 설정되고 그 이후엔 작동하지 않음.
   const [counterChanges, setCounterChanges] = useState([{ id: Math.random() * 10000, value: initialCount }]);
 
+
+   // useEffect(() => {
+   //   setCounterChanges([{ id: Math.random() * 10000, value: initialCount }]);
+   // }, [initialCount]);
+
+   
   // counterChanges의 총합
   const currentCount = counterChanges.reduce((prevCounter, currCount) => prevCounter + currCount.value, 0)
 
