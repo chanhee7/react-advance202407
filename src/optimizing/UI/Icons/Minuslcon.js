@@ -1,5 +1,5 @@
 import React from "react";
-import { log } from '../../../log';
+import { log } from "../../log";
 
 const MinusIcon = props => {
   log('<MinusIcon /> rendered', 3);

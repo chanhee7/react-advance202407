@@ -1,5 +1,5 @@
 import React from "react";
-import { log } from '../../log';
+import { log } from "../log";
 
 const IconButton = ({ children, icon, ...props }) => {
   log('<IconButton /> rendered', 2);

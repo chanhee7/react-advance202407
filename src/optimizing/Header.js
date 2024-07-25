@@ -1,5 +1,5 @@
 import React from "react";
-import { log } from '../log';
+import { log } from "./log";
 
 const Header = () => {
   log('<Header /> rendered!!', 1);
@@ -10,4 +10,4 @@ const Header = () => {
     </header>
   );
 };
-export default Header;
+export default React.memo(Header);

@@ -1,5 +1,5 @@
 import React from 'react';
-import { log } from '../../../log';
+import { log } from '../../log';
 
 const ArrowRightIcon = props => {
   log('<ArrowRightIcon /> rendered', 3);

@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, memo } from 'react';
 
-import IconButton from '../UI/IconButton';
-import MinusIcon from '../UI/Icons/MinusIcon';
-import PlusIcon from '../UI/Icons/PlusIcon';
+import IconButton from '../../UI/IconButton';
+import MinusIcon from '../../UI/Icons/Minuslcon';
+import PlusIcon from '../../UI/Icons/PlusIcon';
 import CounterOutput from './CounterOutput';
 import { log } from '../../log';
 
@@ -59,4 +59,4 @@ const Counter = ({ initialCount }) => {
     </section>
   );
 };
-export default Counter;
+export default memo(Counter);
