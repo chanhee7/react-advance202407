@@ -1,5 +1,4 @@
 import React, { useState, memo } from 'react';
-
 import IconButton from '../../UI/IconButton';
 import MinusIcon from '../../UI/Icons/Minuslcon';
 import PlusIcon from '../../UI/Icons/PlusIcon';
@@ -59,4 +58,5 @@ const Counter = ({ initialCount }) => {
     </section>
   );
 };
+
 export default memo(Counter);
