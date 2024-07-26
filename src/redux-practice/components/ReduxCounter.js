@@ -18,11 +18,11 @@ const ReduxCounter = () => {
 
     // dispatch에는 인자로 어떤 변경을 할지 type과 변경에 필요한
     // payload를 전송
-    dispatch({ type: 'INCREMENT' });
+    dispatch({ type: INCREMENT });
   };
 
   const decreaseHandler = e => {
-    dispatch({ type: 'DECREMENT' });
+    dispatch({ type: DECREMENT });
   };
 
   return (
