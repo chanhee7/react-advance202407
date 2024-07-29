@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import ReduxCounter from './redux-practice/components/ReduxCounter';
-import Header from './redux-practice/components/Header';
-import Auth from './redux-practice/components/Auth';
-import UserProfile from './redux-practice/components/UserProfile';
+import React from 'react';
+import Layout from './redux-cart/components/Layout/Layout';
+import Cart from './redux-cart/components/Cart/Cart';
+import Products from './redux-cart/components/Shop/Products';
 import { useSelector } from 'react-redux';
 
 const App = () => {
@@ -11,10 +10,10 @@ const App = () => {
   
   return (
     <>
-      <Header />
-      {!isLoggedIn && <Auth />}
-      {isLoggedIn && <UserProfile />}
-      <ReduxCounter />
+      <Layout>
+      <Cart />
+      <Products />
+      </Layout>
     </>
   );
 };
