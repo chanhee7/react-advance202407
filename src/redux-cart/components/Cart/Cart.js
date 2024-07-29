@@ -2,8 +2,11 @@ import React from "react";
 import Card from '../UI/Card';
 import styles from './Cart.module.css';
 import CartItem from './CartItem';
+import { useSelector } from "react-redux";
 
 const Cart = () => {
+
+  const cartItems = useSelector(state => state.cart.cartItems);
 
   const cartItem = {
     title: 'aircon',
@@ -12,11 +15,12 @@ const Cart = () => {
     price: 5000,
     id: '1'
   };
+
   return (
     <Card className={styles.cart}>
       <h2>Your Shopping Cart</h2>
       <ul>
-        <CartItem item={cartItem}/>
+        {cartItems.map(item => <CartItem key={item.id} item={item}/>)}
       </ul>
     </Card>
   );
